@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset and disable animations for visual testing */
+* {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Fixed font settings for deterministic rendering */
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Theme CSS Variables */
+:root[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f4f6;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border-color: #d1d5db;
+  --button-primary: #3b82f6;
+  --button-primary-hover: #2563eb;
+  --button-secondary: #e5e7eb;
+  --button-secondary-hover: #d1d5db;
+  --error: #ef4444;
+  --success: #10b981;
+  --input-bg: #ffffff;
+  --card-bg: #ffffff;
+  --card-hover-bg: #f9fafb;
+}
+
+:root[data-theme="dark"] {
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --border-color: #374151;
+  --button-primary: #3b82f6;
+  --button-primary-hover: #2563eb;
+  --button-secondary: #374151;
+  --button-secondary-hover: #4b5563;
+  --error: #ef4444;
+  --success: #10b981;
+  --input-bg: #1f2937;
+  --card-bg: #1f2937;
+  --card-hover-bg: #374151;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Simulated hover state class for testing */
+.simulate-hover {
+  background-color: var(--card-hover-bg) !important;
+}
